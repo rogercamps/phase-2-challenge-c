@@ -1,42 +1,66 @@
 //=== weekday =========================
-function weekday(date) {
-  // if (!(date instanceof Date)) {
-  //   return "Not a valid Date";
-  // }
-  let anyDay = new Date(date)
 
+let parsedDate = new Date()
+
+function weekday(date) {
+  if (date == 'Invalid Date') {
+    throw new Error("Not a valid Date!");
+  }
 
   const days = [
+    'Sunday',
     'Monday',
     'Tuesday',
     'Wednesday',
     'Thursday',
     'Friday',
-    'Saturday',
-    'Sunday']
+    'Saturday']
 
-  let index = anyDay.getDay()
+  let index = date.getDay()
   return days[index];
 }
 
 //=== capitalizeFourth =========================
 
 function capitalizeFourth(string) {
-  let new capFourth = 
-  return capFourth
 
+  if(!(typeof string === 'string')) {
+    throw new Error('Passed argument is not a string!')
+  }
+
+
+  let lowerCasedString = string.toLowerCase()
+  let newString = ''
+
+  for (var i = 0; i < lowerCasedString.length; i++) {
+    if ((i + 1) % 4 === 0) {
+      newString += lowerCasedString[i].toUpperCase()
+    } else {
+      newString += lowerCasedString[i]
+    }
+  }
+  return newString
 }
 
 //=== getValues =========================
 
 function getValues(obj) {
-  let values = Object.values(obj)
-  return values.sort()
+
+  if(!(typeof obj === 'object')) {
+    throw new Error('Passed argument is not an object!')
+  }
+
+  let values = Object.values(obj).sort()
+  return values
 }
 
 //=== filterAround =========================
 
 function filterAround(array, lower, upper) {
+
+  if(!(typeof array === 'object' || array.length)) {
+    throw new Error('Not an object dude!')
+  }
 
   let filteredArray = array.filter(arrayElement => {
     if (lower >= arrayElement || arrayElement > upper) {
@@ -48,7 +72,7 @@ function filterAround(array, lower, upper) {
     return []
   }
 
-return filteredArray
+  return filteredArray
 }
 
 
