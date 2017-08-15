@@ -3,8 +3,9 @@
 let parsedDate = new Date()
 
 function weekday(date) {
+
   if (date == 'Invalid Date') {
-    throw new Error("Not a valid Date!");
+    throw new Error('Not a valid Date!');
   }
 
   const days = [
@@ -19,6 +20,8 @@ function weekday(date) {
   let index = date.getDay()
   return days[index];
 }
+
+
 
 //=== capitalizeFourth =========================
 
@@ -59,11 +62,11 @@ function getValues(obj) {
 function filterAround(array, lower, upper) {
 
   if(!(typeof array === 'object' || array.length)) {
-    throw new Error('Not an object dude!')
+    throw new Error('Passed argument is not an object!')
   }
 
   let filteredArray = array.filter(arrayElement => {
-    if (lower >= arrayElement || arrayElement > upper) {
+    if (lower > arrayElement || arrayElement > upper) {
       return arrayElement
     }
   })
