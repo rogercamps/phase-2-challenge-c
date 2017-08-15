@@ -1,0 +1,110 @@
+html, body {
+ margin: 0;
+ height: 100%;
+ width: 100%;
+ font-family: 'Poiret One', cursive;
+}
+
+.header {
+  margin: 20px;
+  /*position: fixed;*/
+}
+
+.container {
+  /*display: absolute;*/
+  height: 100%;
+  line-height: 1.5;
+  width: 100%;
+  font-family: 'Poiret One', cursive;
+}
+
+
+.sidebar {
+  float: right;
+  background-color: #F4F4F4;
+  -webkit-flex: 1;
+  flex: 1;
+  position: fixed;
+  height: 100%;
+  width: 275px;
+  overflow-y: auto;
+  padding-left: 15px;
+  line-height: 30px;
+}
+
+
+.btnLogout {
+  float: right;
+  color: #292b2c;
+  background-color: #fff;
+  border-color: #ccc;
+  font-family: 'Poiret One', cursive;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.dividingLine {
+  height:1px;
+  background:#717171;
+  border-bottom:1px solid #313030;
+}
+
+.sidebarBulletPoint {
+  list-style: none;
+  padding-left: 15px;
+}
+
+aside {
+  border: 2px solid black;
+  float: right;
+
+}
+.sidebarTitle {
+  background-color: #717171;
+  padding: 15px;
+  margin: 0;
+  border-bottom: 2px solid black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: orange;
+}
+
+main {
+  background-color: #FFFFFF;
+  padding: 10px;
+  -webkit-flex: 5;
+  flex: 5;
+  margin: 0 0 0 325px;
+  padding-right: 3rem;
+  /*display: block;*/
+}
+
+li {
+  list-style: none;
+  padding-left: 0;
+
+}
+
+.book-title {
+  padding-left: 0;
+  line-height: 3.5;
+  margin: 15px;
+}
+
+.buy {
+  float: right;
+  padding: 15px;
+  border-radius: 4px;
+  font-family: 'Poiret One', cursive;
+
+}
+.author-name {
+  padding: 100px ;
+  margin-left: 10px;
+}
