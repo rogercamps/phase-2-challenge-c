@@ -3,8 +3,9 @@
 let parsedDate = new Date()
 
 function weekday(date) {
-  if (parsedDate == 'Invalid Date') {
-    throw new Error("Not a valid Date!");
+
+  if (date == 'Invalid Date') {
+    throw new Error('Not a valid Date!');
   }
 
   const days = [
@@ -16,9 +17,11 @@ function weekday(date) {
     'Friday',
     'Saturday']
 
-  let index = parsedDate.getDay()
+  let index = date.getDay()
   return days[index];
 }
+
+
 
 //=== capitalizeFourth =========================
 
@@ -63,7 +66,7 @@ function filterAround(array, lower, upper) {
   }
 
   let filteredArray = array.filter(arrayElement => {
-    if (lower >= arrayElement || arrayElement > upper) {
+    if (lower > arrayElement || arrayElement > upper) {
       return arrayElement
     }
   })
