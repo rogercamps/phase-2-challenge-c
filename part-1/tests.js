@@ -8,14 +8,14 @@ filterAround } = require('./functions.js');
 
 describe('weekday', function() {
   it('should return the day of the given date', function() {
-    const parsedDate = new Date('2017, 15, 08')
-    assert.equal(weekday(parsedDate), 'Tuesday')
+    let date = new Date('2017, 08, 14')
+    assert.equal(weekday(date), 'Monday')
   });
 
-//   it('should return an error when given an invalid input', function() {
-//     const parsedDate = new Date('x')
-//     assert.deepEqual(weekday(parsedDate), 'Not a valid Date!')
-//   });
+  it('should return an error when given an invalid input', function() {
+    let date = new Date('x')
+    assert.throws( () => { weekday(date) }, Error, 'Not a valid Date!')
+  });
 
 });
 
@@ -27,10 +27,10 @@ describe('capitalizeFourth', function() {
     assert.equal(capitalizeFourth(string), 'eenIe, MeenIe, MineY, mOe')
   });
 
-//   it('should return an error when given an invalid input', function() {
-//     const string = 3
-//     assert.fail(capitalizeFourth(string), 'Passed argument is not a string!')
-//   });
+  it('should return an error when given an invalid input', function() {
+    const string = 3
+    assert.throws( () => { (capitalizeFourth(string))}, 'Passed argument is not a string!')
+  });
 });
 
 //=== getValues =========================
@@ -42,26 +42,26 @@ describe('getValues', function() {
       age: 30,
       phone: '555-555-5555'
     }
-    assert.equal(getValues(person), ['Dominique', 30, '555-555-5555'])
+    assert.deepEqual(getValues(person), [30, '555-555-5555', 'Dominique'])
   });
 
-//   it('should return an error when given an invalid input', function() {
-//     let person = 'Testing'
-//     assert.equal(getValues(string), 'Passed argument is not an object!')
-//   });
-// });
+  it('should return an error when given an invalid input', function() {
+    let person = 'Testing'
+    assert.throws( () => { (getValues(person))}, 'Passed argument is not an object!')
+  });
+});
 
 //=== filterAround =========================
 
 describe('filterAround', function() {
   it('should return a new array containing only the elements from the source array that come before lower alphabetically and after upper', function() {
     let animals = ['dog', 'cat', 'zebra', 'ape', 'lion', 'cow']
-    assert.equal(filterAround(animals, 'cow', 'dog'), ['cat', 'zebra', 'ape', 'lion'])
-    // assert.equal(filterAround(animals, 'chimp', 'lobster'), ['cat', 'zebra', 'ape'])
+    console.log(filterAround(animals, 'cow', 'dog'));
+    assert.deepEqual(filterAround(animals, 'cow', 'dog'), ['cat', 'zebra', 'ape', 'lion'])
   });
 
-//   it('should return an error when given an invalid input', function() {
-//     let animals = 3
-//     assert.equal(filterAround(string), 'Passed argument is not an object!')
+  it('should return an error when given an invalid input', function() {
+    let animals = 3
+    assert.throws( () => {(filterAround(animals))}, 'Passed argument is not an object!')
   });
 });
