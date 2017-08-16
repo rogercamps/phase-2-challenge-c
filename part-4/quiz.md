@@ -1,13 +1,12 @@
 1 - What is the PATH environment variable used for in UNIX systems?
+- It specifies a set of directories where executable programs are located. In general, each executing process or user session has its own PATH setting.
 
 2 - On a UNIX computer, how do you stop a running process?
 - You can use Ctrl - C to end a program's execution in the terminal. You can kill programs that have already been stopped with kill: kill PID
 
 
 3 - Which command can you use to see which homebrew packages you've installed?
-```
-  $ brew list
-```
+- ```$ brew list```
 
 4 - On a UNIX computer, how do you find the process id of a running process?
 - using the command ```$ ps```
@@ -33,12 +32,18 @@
   ```
 
 7 - How do you see which environment variables are set in your shell?
+- ```printenv```
 
 8 - What keyboard shortcut do you use to perform a "Find" search in your
  editor?
+- Command + F
+
 9 - How do you see which aliases you have in your shell?
+- Just type ```alias``` in your shell to see the full list
 
 10 - When a terminal command completes, how can you tell if it was successful or not?
+- If is successful I get no response, and in Zsh epending on if what I see is a green or a red arrow
+
 
 11 - What does your `~/.gitconfig` have in it? (paste the whole file here)
 - ```git config --list``` shows the following results
@@ -89,8 +94,16 @@ branch.master.merge=refs/heads/master
 
   And you were in the `facebook-for-mimes` folder. What command would you use to copy the `README.md` file to the `airbnb-for-llamas` folder?
 
+- cp README.md ../airbnb-for-llamas
+
 14 - What keyboard shortcut do you use in your editor to quickly navigate to a file in the current project?
+- Command + T
 
 15 - Give an example of a file or folder pattern you commonly add to a .gitignore file and why you add it
 
+- ```node_modules```
+
+- I add it beacause I don't want to include all node modules I am not using
+
 16 - What are the main differences between `Array.sort` and `Array.filter` in JavaScript?
+- Sort returns the same array and filter returns a new array
