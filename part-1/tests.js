@@ -3,7 +3,6 @@ const { weekday,
 capitalizeFourth,
 getValues,
 filterAround } = require('./functions.js');
-
 //=== weekday =========================
 
 describe('weekday', function() {
