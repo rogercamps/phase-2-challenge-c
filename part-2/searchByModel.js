@@ -9,7 +9,6 @@ fs.readFile('./cars.json', 'utf-8', (err, data) => {
   parsedData.forEach( car => {
     let automobileData = car.model.toLowerCase()
 
-
     if (automobileData.match(query)) {
       let automobile = {}
       automobile.id = car.id

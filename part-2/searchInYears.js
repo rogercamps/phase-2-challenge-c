@@ -8,7 +8,6 @@ fs.readFile('./cars.json', 'utf-8', (err, data) => {
   let beginDate = Number(query[0])
   let endDate = Number(query[1])
 
-
   data.forEach( car => {
     let automobileData = car.year
 
@@ -18,7 +17,6 @@ fs.readFile('./cars.json', 'utf-8', (err, data) => {
       automobile.make = car.make
       automobile.model = car.model
       automobile.year = car.year
-
 
       model.push(automobile)
     }

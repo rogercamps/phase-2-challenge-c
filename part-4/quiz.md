@@ -1,3 +1,4 @@
+
 1 - What is the PATH environment variable used for in UNIX systems?
 - It specifies a set of directories where executable programs are located. In general, each executing process or user session has its own PATH setting.
 
