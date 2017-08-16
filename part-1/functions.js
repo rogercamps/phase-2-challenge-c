@@ -21,8 +21,6 @@ function weekday(date) {
   return days[index];
 }
 
-
-
 //=== capitalizeFourth =========================
 
 function capitalizeFourth(string) {
@@ -30,7 +28,6 @@ function capitalizeFourth(string) {
   if(!(typeof string === 'string')) {
     throw new Error('Passed argument is not a string!')
   }
-
 
   let lowerCasedString = string.toLowerCase()
   let newString = ''
@@ -77,7 +74,6 @@ function filterAround(array, lower, upper) {
 
   return filteredArray
 }
-
 
 
 module.exports = {

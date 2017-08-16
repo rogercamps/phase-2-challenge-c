@@ -17,18 +17,15 @@ html, body {
   font-family: 'Poiret One', cursive;
 }
 
-
 .sidebar {
   float: right;
   background-color: #F4F4F4;
   height: 100%;
   width: 25%;
-  /*overflow-y: auto;*/
   line-height: 30px;
   position: fixed;
   right: 0;
 }
-
 
 .btnBag {
   float: right;
@@ -53,7 +50,6 @@ html, body {
 
 aside {
   border: 2px solid black;
-  /*float: right;*/
 
 }
 .sidebarTitle {
@@ -77,14 +73,12 @@ main {
   float: left;
   padding: 10px;
   margin: 0 0 0 40px;
-  /*padding-right: 3rem;*/
   width: 70%;
 }
 
 li {
   list-style: none;
   padding-left: 0;
-
 }
 
 .book-title {
